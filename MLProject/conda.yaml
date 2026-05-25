@@ -1,0 +1,12 @@
+name: customer-churn-mlflow-ci
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - matplotlib>=3.8
+      - mlflow>=3.0
+      - numpy>=1.26
+      - pandas>=2.0
+      - scikit-learn>=1.4

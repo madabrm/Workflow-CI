@@ -1,0 +1,21 @@
+name: customer-churn-mlflow-ci
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      data_dir: {type: str, default: "customer_churn_preprocessing"}
+      output_dir: {type: str, default: "outputs"}
+      n_estimators: {type: int, default: 150}
+      learning_rate: {type: float, default: 0.1}
+      max_depth: {type: int, default: 3}
+      subsample: {type: float, default: 1.0}
+    command: >-
+      python modelling.py
+      --data-dir {data_dir}
+      --output-dir {output_dir}
+      --n-estimators {n_estimators}
+      --learning-rate {learning_rate}
+      --max-depth {max_depth}
+      --subsample {subsample}
