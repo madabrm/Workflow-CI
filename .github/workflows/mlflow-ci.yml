@@ -14,6 +14,9 @@ on:
       - ".github/workflows/mlflow-ci.yml"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 env:
   PROJECT_DIR: MLProject
   MLFLOW_TRACKING_URI: file://${{ github.workspace }}/mlruns
