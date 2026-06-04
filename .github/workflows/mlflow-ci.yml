@@ -50,14 +50,19 @@ jobs:
           mlflow run . --env-manager local
 
       - name: Commit Artifacts to GitHub
+        if: ${{ github.event_name != 'pull_request' }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add MLProject/saved_model/
+          if [ ! -d "${PROJECT_DIR}/outputs" ]; then
+            echo "Folder ${PROJECT_DIR}/outputs tidak ditemukan. Lewati commit artifact."
+            exit 0
+          fi
+          git add "${PROJECT_DIR}/outputs/"
           if git diff --staged --quiet; then
             echo "Tidak ada artefak baru untuk di-commit."
           else
-            git commit -m "Auto-save model artifacts to GitHub Repo"
+            git commit -m "Auto-save model artifacts to GitHub Repo [skip ci]"
             git pull origin main --rebase
             git push
           fi
