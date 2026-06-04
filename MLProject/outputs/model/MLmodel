@@ -1,0 +1,92 @@
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.13
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.9.0
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.13.0
+model_id: null
+model_size_bytes: 215303
+model_uuid: c8242332f6b44a1095e08bfe2d6b1e22
+prompts: null
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "account_length", "required": true}, {"type":
+    "double", "name": "international_plan", "required": true}, {"type": "double",
+    "name": "voice_mail_plan", "required": true}, {"type": "double", "name": "number_vmail_messages",
+    "required": true}, {"type": "double", "name": "total_day_minutes", "required":
+    true}, {"type": "double", "name": "total_day_calls", "required": true}, {"type":
+    "double", "name": "total_day_charge", "required": true}, {"type": "double", "name":
+    "total_eve_minutes", "required": true}, {"type": "double", "name": "total_eve_calls",
+    "required": true}, {"type": "double", "name": "total_eve_charge", "required":
+    true}, {"type": "double", "name": "total_night_minutes", "required": true}, {"type":
+    "double", "name": "total_night_calls", "required": true}, {"type": "double", "name":
+    "total_night_charge", "required": true}, {"type": "double", "name": "total_intl_minutes",
+    "required": true}, {"type": "double", "name": "total_intl_calls", "required":
+    true}, {"type": "double", "name": "total_intl_charge", "required": true}, {"type":
+    "double", "name": "customer_service_calls", "required": true}, {"type": "double",
+    "name": "high_service_calls", "required": true}, {"type": "double", "name": "rule_based_churn_risk_score",
+    "required": true}, {"type": "double", "name": "state_AK", "required": true}, {"type":
+    "double", "name": "state_AL", "required": true}, {"type": "double", "name": "state_AR",
+    "required": true}, {"type": "double", "name": "state_AZ", "required": true}, {"type":
+    "double", "name": "state_CA", "required": true}, {"type": "double", "name": "state_CO",
+    "required": true}, {"type": "double", "name": "state_CT", "required": true}, {"type":
+    "double", "name": "state_DC", "required": true}, {"type": "double", "name": "state_DE",
+    "required": true}, {"type": "double", "name": "state_FL", "required": true}, {"type":
+    "double", "name": "state_GA", "required": true}, {"type": "double", "name": "state_HI",
+    "required": true}, {"type": "double", "name": "state_IA", "required": true}, {"type":
+    "double", "name": "state_ID", "required": true}, {"type": "double", "name": "state_IL",
+    "required": true}, {"type": "double", "name": "state_IN", "required": true}, {"type":
+    "double", "name": "state_KS", "required": true}, {"type": "double", "name": "state_KY",
+    "required": true}, {"type": "double", "name": "state_LA", "required": true}, {"type":
+    "double", "name": "state_MA", "required": true}, {"type": "double", "name": "state_MD",
+    "required": true}, {"type": "double", "name": "state_ME", "required": true}, {"type":
+    "double", "name": "state_MI", "required": true}, {"type": "double", "name": "state_MN",
+    "required": true}, {"type": "double", "name": "state_MO", "required": true}, {"type":
+    "double", "name": "state_MS", "required": true}, {"type": "double", "name": "state_MT",
+    "required": true}, {"type": "double", "name": "state_NC", "required": true}, {"type":
+    "double", "name": "state_ND", "required": true}, {"type": "double", "name": "state_NE",
+    "required": true}, {"type": "double", "name": "state_NH", "required": true}, {"type":
+    "double", "name": "state_NJ", "required": true}, {"type": "double", "name": "state_NM",
+    "required": true}, {"type": "double", "name": "state_NV", "required": true}, {"type":
+    "double", "name": "state_NY", "required": true}, {"type": "double", "name": "state_OH",
+    "required": true}, {"type": "double", "name": "state_OK", "required": true}, {"type":
+    "double", "name": "state_OR", "required": true}, {"type": "double", "name": "state_PA",
+    "required": true}, {"type": "double", "name": "state_RI", "required": true}, {"type":
+    "double", "name": "state_SC", "required": true}, {"type": "double", "name": "state_SD",
+    "required": true}, {"type": "double", "name": "state_TN", "required": true}, {"type":
+    "double", "name": "state_TX", "required": true}, {"type": "double", "name": "state_UT",
+    "required": true}, {"type": "double", "name": "state_VA", "required": true}, {"type":
+    "double", "name": "state_VT", "required": true}, {"type": "double", "name": "state_WA",
+    "required": true}, {"type": "double", "name": "state_WI", "required": true}, {"type":
+    "double", "name": "state_WV", "required": true}, {"type": "double", "name": "state_WY",
+    "required": true}, {"type": "double", "name": "usage_intensity_high_usage", "required":
+    true}, {"type": "double", "name": "usage_intensity_low_usage", "required": true},
+    {"type": "double", "name": "usage_intensity_medium_usage", "required": true},
+    {"type": "double", "name": "customer_value_segment_high_value", "required": true},
+    {"type": "double", "name": "customer_value_segment_low_value", "required": true},
+    {"type": "double", "name": "customer_value_segment_medium_value", "required":
+    true}, {"type": "double", "name": "rule_based_churn_risk_level_high", "required":
+    true}, {"type": "double", "name": "rule_based_churn_risk_level_low", "required":
+    true}, {"type": "double", "name": "rule_based_churn_risk_level_medium", "required":
+    true}, {"type": "double", "name": "area_code_408", "required": true}, {"type":
+    "double", "name": "area_code_415", "required": true}, {"type": "double", "name":
+    "area_code_510", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-06-04 05:55:10.025457'

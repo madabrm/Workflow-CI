@@ -1,0 +1,31 @@
+{
+  "run_id": "e6f48fb2d7cb48a69a399e669e24271b",
+  "model_uri": "runs:/e6f48fb2d7cb48a69a399e669e24271b/model",
+  "local_model_dir": "outputs/model",
+  "metrics": {
+    "train_accuracy": 0.9859287054409006,
+    "train_precision": 1.0,
+    "train_recall": 0.9032258064516129,
+    "train_f1_score": 0.9491525423728814,
+    "train_roc_auc": 0.9947160157218229,
+    "train_log_loss": 0.06905374642272728,
+    "validation_accuracy": 0.9400749063670412,
+    "validation_precision": 0.896551724137931,
+    "validation_recall": 0.6666666666666666,
+    "validation_f1_score": 0.7647058823529411,
+    "validation_roc_auc": 0.8811291048133153,
+    "validation_log_loss": 0.20487441344487026,
+    "test_accuracy": 0.9505247376311844,
+    "test_precision": 0.9078947368421053,
+    "test_recall": 0.7263157894736842,
+    "test_f1_score": 0.8070175438596491,
+    "test_roc_auc": 0.9332351858667648,
+    "test_log_loss": 0.16223846552430918
+  },
+  "params": {
+    "n_estimators": 150,
+    "learning_rate": 0.1,
+    "max_depth": 3,
+    "subsample": 1.0
+  }
+}
