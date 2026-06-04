@@ -17,6 +17,7 @@ on:
 env:
   PROJECT_DIR: MLProject
   MLFLOW_TRACKING_URI: file://${{ github.workspace }}/mlruns
+  MLFLOW_ALLOW_FILE_STORE: "true"
   DOCKER_IMAGE_NAME: customer-churn-mlflow
 
 jobs:
@@ -28,10 +29,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
